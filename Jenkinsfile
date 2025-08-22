@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Starts tests') {
             steps {
-                sh 'python3 -m pip install pytest'x 
+                sh 'python3 -m pip install pytest' 
                 sh 'python3 -m pytest . --junit-xml=report.xml'
                 junit keepProperties: true, keepTestNames: true, stdioRetention: 'ALL', testResults: 'report.xml'
             }  
