@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="2" time="0.049" timestamp="2025-08-22T12:32:13.748324+03:00" hostname="MacBook-Pro.local"><testcase classname="test_sum" name="test_sum_pos" time="0.001" /><testcase classname="test_sum" name="test_sum_neg" time="0.001"><failure message="assert (2 + 2) == 3">def test_sum_neg():
+&gt;     assert 2+2==3
+E     assert (2 + 2) == 3
+
+test_sum.py:5: AssertionError</failure></testcase></testsuite></testsuites>
