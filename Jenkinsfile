@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image "python 3.11"
+        }
+    }
  
     stages {
         stage('Get code from Git') {
@@ -9,6 +13,7 @@ pipeline {
         }
         stage('Starts tests') {
             steps {
+                sh 'python3 -m pip install pytest'x 
                 sh 'python3 -m pytest . --junit-xml=report.xml'
                 junit keepProperties: true, keepTestNames: true, stdioRetention: 'ALL', testResults: 'report.xml'
             }  
